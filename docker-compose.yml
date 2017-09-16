@@ -9,8 +9,6 @@ services:
       - net
 
   resque:
-    build:
-      context: .
     image: kinghuang/techcrunchsf2017
     ports:
       - "3000:3000"
