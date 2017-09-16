@@ -9,9 +9,10 @@ services:
       - net
 
   resque:
-    build:
-      context: .
     image: kinghuang/techcrunchsf2017
+    environment:
+      - HOST=0.0.0.0
+      - MONGO_HOST=mongodb://mongo/resque
     ports:
       - "3000:3000"
 

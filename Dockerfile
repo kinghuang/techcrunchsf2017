@@ -10,8 +10,6 @@ RUN npm install
 
 ADD . /app
 
-ENV HOST 0.0.0.0
-ENV MONGO_HOST=mongodb://mongo/resque
 EXPOSE 3000
 
 CMD ["npm", "start"]
