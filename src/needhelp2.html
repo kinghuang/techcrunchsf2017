@@ -231,7 +231,8 @@
 
             var http = new XMLHttpRequest()
             var url = "https://rest.nexmo.com/sms/json";
-            var body = "from=ResQue&text=Help+is+on+the+way!&to=14033833254&api_key=54d59d06&api_secret=5a001044e14b28f1";
+            var name = document.getElementById("name").value.replace(" ", "+");
+            var body = "from=12016728938&text=Help+is+on+the+way,+" + name + "!&to=14033833254&api_key=54d59d06&api_secret=5a001044e14b28f1";
 
             http.open("POST", url, true);
             http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
