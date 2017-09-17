@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Get started with graphics - 4.4</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.4/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.4/"></script>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/Graphic",
+      "esri/geometry/Point",
+      "esri/symbols/PictureMarkerSymbol",
+      "dojo/domReady!"
+    ], function(
+      Map, MapView,
+      Graphic, Point,
+      PictureMarkerSymbol
+    ) {
+
+      var map = new Map({
+        basemap: "hybrid"
+      });
+
+      var view = new MapView({
+        center: [-80, 35],
+        container: "viewDiv",
+        map: map,
+        zoom: 3
+      });
+
+      var symbol = new PictureMarkerSymbol({
+        url: "https://png.icons8.com/volunteering/color/24",
+        width: "20px",
+        height: "20px"
+      });
+        
+      view.on("click", function(event){
+        var pointGraphic = new Graphic({
+          geometry: event.mapPoint,
+          symbol: symbol
+        })
+        console.log(pointGraphic)
+        view.graphics.add(pointGraphic)
+      });
+     
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
+</html>
