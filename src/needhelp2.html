@@ -29,7 +29,6 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -192,7 +191,7 @@
         <div class="row" style=" margin-top: 5px;">
             <div class="col-xs-3" >
                 <div  style="margin-left: 5px; margin-top: 5px;" align="center">
-                    <a href="needhelp_3.html">
+                    <a id="sms">
                      <font size="4" family="Oxygen" color="white"> Continue </font>
                  </a>
                 </div>
@@ -217,6 +216,30 @@
 
 
     </div>
+
+
+    <script language="javascript">
+        console.log("Attach");
+
+        var sms_button = document.getElementById("sms");
+        sms_button.addEventListener("click", function() {
+            console.log("Send SMS.");
+
+            var http = new XMLHttpRequest()
+            var url = "https://rest.nexmo.com/sms/json";
+            var body = "from=ResQue&text=Help+is+on+the+way!&to=14033833254&api_key=54d59d06&api_secret=5a001044e14b28f1";
+
+            http.open("POST", url, true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.onreadystatechange = function() {
+                if(http.readyState == 4 && http.status == 200) {
+                    console.log("Done SMS.");
+                    window.location.href = './needhelp_3.html';
+                }
+            }
+            http.send(body);
+        }, false);
+    </script>
 
 </body>
 
