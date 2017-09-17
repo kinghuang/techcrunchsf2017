@@ -47,9 +47,62 @@
             padding: 0;
         }
 
+        h1 {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            line-height: 47px;
+            font-size: 24px;
+            text-align: center;
+            color: #27B5EA;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #stats {
+            position: absolute;
+            top: 48px;
+            right: 50%;
+            left: 0;
+            height: 96px;
+            color: #27B5EA;
+        }
+
+        #stats > div {
+            float: left;
+            width: 33%;
+            background: white;
+            height: 96px;
+            text-align: center;
+        }
+
+        #stats > div:first-child {
+            width: 34%;
+        }
+
+        #stats em {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            display: block;
+            line-height: 48px;
+            padding-top: 8px;
+        }
+
+        #stats .victims {
+            color: red;
+        }
+
+        #stats .spaces {
+            color: green;
+        }
+
         #map {
             position: absolute;
-            top: 0;
+            top: 48px;
             right: 0;
             bottom: 0;
             left: 50%;
@@ -58,6 +111,14 @@
 </head>
 
 <body class="claro">
+
+    <h1>ResQue Dashboard</h1>
+
+    <div id="stats">
+        <div class="victims"><em>24</em> <span>Victims</span></div>
+        <div class="rescuers"><em>5</em> <span>Rescuers</span></div>
+        <div class="spaces"><em>7</em> <span>Safe Spaces</span></div>
+    </div>
 
     <div id="map"></div>
 
