@@ -6,4 +6,5 @@ services:
       context: .
     volumes:
       - ./server:/app/server
+      - ./src:/app/src
       - ./config:/app/config
