@@ -8,6 +8,10 @@ body {
     padding-bottom: 55px;
     overflow-x : hidden;
     background-color: #27B5EA;
+
+    text-align: center;
+    font: 24px Helvetica Neue;
+    color: white;
 }
 
 .no-left-padding {
