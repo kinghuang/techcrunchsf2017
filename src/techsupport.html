@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ResQueHelp</title>
+    <title>TechSupport</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
@@ -31,24 +31,32 @@
     <![endif]-->
 
     <style>
-        body {
-            text-align: center;
-        }
-
         div.row {
             margin-top: 36px;
+        }
+
+        div.row div.prompt {
+            width: 50%;
+            text-align: right;
+            padding: 4px 12px 0 0;
+            float: left;
         }
 
         div.row div.prompt {
             margin-bottom: 18px;
         }
 
-        div.options input {
-            margin-right: 36px;
+        button, textarea, input {
+            color: black;
         }
 
-        button {
-            color: black;
+        textarea {
+            width: 30%;
+            height: 240px;
+        }
+
+        div.actions {
+            text-align: center;
         }
     </style>
 </head>
@@ -58,43 +66,22 @@
 <!-- Header -->
 
     <div class="container-fluid">
-
-        <div class="row">
-            <div class="prompt">Do you or anyone else require emergency assistance?</div>
-            <div class="options">
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
-            </div>
+        <div class="row" style="margin-left: 15px">
+        <h1>Call Us</h1>
+        </div>
+        <div class="row" style="margin-left: 15px">
+            <h3> 111 222 3456 </h3>
         </div>
 
-        <div class="row">
-            <div class="prompt">Do you or anyone else require medical attention?</div>
-            <div class="options">
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
-            </div>
+        <div class="row" style="margin-left: 15px">
+            <h1> Email Us </h1>
         </div>
 
-        <div class="row">
-            <div class="prompt">Are you in a safe place?</div>
-            <div class="options">
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
-            </div>
-            </div>
+
+        <div class="row" style="margin-left: 15px">
+            <h3> resquehelp@support.com </h3>
         </div>
 
-        <div class="row">
-            <a href="needhelp2.html">
-                <font size="5" family="Oxygen" color="white"> Continue </font>
-            </a>
-        </div>
     </div>
 
 </body>
