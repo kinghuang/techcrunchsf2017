@@ -9,7 +9,6 @@ body {
     overflow-x : hidden;
     background-color: #27B5EA;
 
-    text-align: center;
     font: 24px Helvetica Neue;
     color: white;
 }
@@ -302,7 +301,6 @@ body a:hover {
 
 body {
     padding-bottom: 40px;
-    color: #5a5a5a;
 }
 
 .list-group-item {

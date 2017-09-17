@@ -31,24 +31,32 @@
     <![endif]-->
 
     <style>
-        body {
-            text-align: center;
-        }
-
         div.row {
             margin-top: 36px;   
+        }
+
+        div.row div.prompt {
+            width: 50%;
+            text-align: right;
+            padding: 4px 12px 0 0;
+            float: left;
         }
 
         div.row div.prompt {
             margin-bottom: 18px;
         }
 
-        div.options input {
-            margin-right: 36px;
+        button, textarea, input {
+            color: black;
         }
 
-        button {
-            color: black;
+        textarea {
+            width: 30%;
+            height: 240px;
+        }
+
+        div.actions {
+            text-align: center;
         }
     </style>
 </head>
@@ -59,38 +67,27 @@
 
     <div class="container-fluid">
 
+        <h1>Just a few more questions</h1>
+
         <div class="row">
-            <div class="prompt">Do you or anyone else require emergency assistance?</div>
-            <div class="options">
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
-            </div>
+            <div class="prompt">Number of people needing assistance</div>
+            <div class="options"><input type="number" /></div>
         </div>
 
         <div class="row">
-            <div class="prompt">Do you or anyone else require medical attention?</div>
-            <div class="options">
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
-            </div>
+            <div class="prompt">Are there any hazards?</div>
+            <div class="options"><input type="text" /></div>
         </div>
 
         <div class="row">
-            <div class="prompt">Are you in a safe place?</div>
-            <div class="options">
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
-            </div>
+            <div class="prompt">Any other information that we should know to better assist you?</div>
+            <div class="options"><textarea></textarea></div>
         </div>
 
-        <div class="row">
+        <div class="row actions">
             <button>Continue</button>
+            <button>Cancel</button>
+            <button>Technical Support</button>
         </div>
     </div>
 
